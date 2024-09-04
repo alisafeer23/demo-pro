@@ -1,0 +1,33 @@
+:host {
+    display: block;
+    height: 80vh; /* Full viewport height */
+    width: 80vw;  /* Full viewport width */
+    overflow: hidden; /* Prevent scrollbars */
+    position: relative; /* Position relative to use z-index */
+  }
+  
+  .background {
+    position: fixed; /* Fixes the background image */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background-image: url('../../assets/images/background-home.jpg');
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent image repeat */
+    z-index: -1; /* Place the background behind other content */
+  }
+  
+  .content {
+    position: relative; /* Ensure content is above the background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height for centering */
+    color: white; /* Or any contrasting color */
+    text-align: center;
+    z-index: 1; /* Ensure content is above the background */
+  }
+  

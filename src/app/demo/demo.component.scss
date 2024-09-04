@@ -1,0 +1,46 @@
+:host {
+    display: block;
+    height: 80vh; /* Full viewport height */
+    width: 80vw;  /* Full viewport width */
+    overflow: hidden; /* Prevent scrollbars */
+    position: relative; /* Position relative to use z-index */
+  }
+  
+  /* Background image styling */
+  .background {
+    position: fixed; /* Fixes the background image */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background-image: url('../../assets/images/background-demo.jpg');
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent image repeat */
+    z-index: -1; /* Place the background behind other content */
+  }
+  
+  /* Content styling */
+  .content {
+    position: relative; /* Ensure content is above the background */
+    z-index: 1; /* Ensure content is above the background */
+  }
+  
+  /* Sidebar styling */
+  #sidebar {
+    position:fixed;
+    top: 56px; /* Adjust based on navbar height */
+    left: 0;
+    height: calc(100vh - 56px); /* Full height minus navbar height */
+    width: 190px; /* Adjust based on your design */
+    background-color: #255841; /* Updated Sidebar color */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    z-index: 1000; /* Ensure it stays above other elements */
+  }
+  
+  /* Adjust main content margin to ensure it doesn't overlap with the sidebar */
+  main {
+    margin-left: 250px; /* Same width as sidebar */
+    margin-top: 56px; /* Same height as navbar */
+    padding: 20px;
+  }

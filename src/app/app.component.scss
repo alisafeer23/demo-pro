@@ -1,0 +1,18 @@
+/* styles.scss or a component-specific stylesheet */
+.custom-navbar {
+    background-color: #003c81; /* Custom navbar color */
+    border-bottom: 1px solid #55c5c3; /* Optional: add a border */
+  }
+  
+  .custom-navbar .navbar-brand {
+    color: #115c8a; /* Custom text color for the brand */
+  }
+  
+  .custom-navbar .nav-link {
+    color: #21739f; /* Custom text color for the nav links */
+  }
+  
+  .custom-navbar .nav-link.active {
+    color: #6f1f8f; /* Color for the active nav link */
+  }
+  
