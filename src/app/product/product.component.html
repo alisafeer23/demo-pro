@@ -1,0 +1,6 @@
+<h2>{{ productName }}</h2>
+<p>{{ productDescription }}</p>
+
+<div *ngIf="videoUrl">
+  <iframe [src]="videoUrl | safe" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+</div>
