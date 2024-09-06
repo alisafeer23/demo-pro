@@ -12,15 +12,18 @@ export class ProductComponent implements OnInit {
   productDescription: string = '';
   videoUrl: string = '';
 
+  // Tabs data
+  tabs: Array<{ id: string, title: string, content: string }> = [];
+
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       this.productId = params.get('id');
       this.loadProductDetails();
+      this.initializeTabs(); // Initialize tabs after loading product details
     });
   }
-  
 
   loadProductDetails(): void {
     switch (this.productId) {
@@ -39,5 +42,13 @@ export class ProductComponent implements OnInit {
         this.productDescription = 'No description available.';
         this.videoUrl = '';
     }
+  }
+
+  initializeTabs(): void {
+    this.tabs = [
+      { id: 'london', title: 'London', content: `Explore the historic landmarks of London with ${this.productName}.` },
+      { id: 'paris', title: 'Paris', content: `Discover the romantic city of Paris with ${this.productName}.` },
+      { id: 'tokyo', title: 'Tokyo', content: `Experience the vibrant culture of Tokyo with ${this.productName}.` },
+    ];
   }
 }
