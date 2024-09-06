@@ -32,7 +32,7 @@
     top: 42px; /* Adjust based on navbar height */
     left:-27px;
     height: calc(100vh - 42px); /* Full height minus navbar height */
-    width: 145px; /* Adjust based on your design */
+    width: 200px; /* Adjust based on your design */
     background-color: #255841; /* Updated Sidebar color */
     overflow-y: auto; /* Allow scrolling if content overflows */
     z-index: 1000; /* Ensure it stays above other elements */
@@ -40,7 +40,7 @@
   
   /* Adjust main content margin to ensure it doesn't overlap with the sidebar */
   main {
-    margin-left: 180px; /* Same width as sidebar */
-    margin-top: 42px; /* Same height as navbar */
-    padding: 50px;
+    margin-left: 1% !important; /* Same width as sidebar */
+    margin-top: 1% !important; /* Same height as navbar */
+    padding: 0px;
   }
