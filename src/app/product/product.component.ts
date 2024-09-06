@@ -20,6 +20,7 @@ export class ProductComponent implements OnInit {
       this.loadProductDetails();
     });
   }
+  
 
   loadProductDetails(): void {
     switch (this.productId) {
